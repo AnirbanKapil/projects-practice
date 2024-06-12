@@ -1,8 +1,14 @@
 import React from 'react'
+import Post from './Post'
 
 function PostList() {
   return (
-    <div>PostList</div>
+    <>
+    <Post />
+    <Post />
+    <Post />
+    <Post />
+    </>
   )
 }
 
