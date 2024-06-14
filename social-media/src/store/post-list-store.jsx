@@ -4,7 +4,9 @@ import { createContext, useReducer } from "react"
 export const PostList = createContext({
    postList : [],
    addPost : () => {},
-   deletePost : () => {}
+   deletePost : () => {
+      
+   }
 });
 
 const postListReducer = (currPostList,action) => {
@@ -14,7 +16,14 @@ const postListReducer = (currPostList,action) => {
 const PostListProvider = ({children}) => {
    const [postList,dispatchPostList] = useReducer(postListReducer,DEFAULT_POST_LIST)
    const addPost = () => {}
-   const deletePost = () => {};
+   const deletePost = (postId) => {
+      dispatchPostList({
+         type : "DELETE_POST",
+         payload : {
+            postId,
+         }
+      })
+   };
 
    
 
