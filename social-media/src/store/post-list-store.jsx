@@ -72,14 +72,7 @@ const DEFAULT_POST_LIST = [{
     userId : "user001",
     tags : ["hike","travel"]
 },
- {
-   id : "2",
-   title : "A new Car",
-   body : "Bought a new car for myself (Range rover)",
-   reactions : 6,
-   userId : "user005",
-   tags : ["car","rover"]
- }
+
 ]
 
 export default PostListProvider
